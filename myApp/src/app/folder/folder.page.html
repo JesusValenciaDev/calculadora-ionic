@@ -1,0 +1,105 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ folder }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <!-- <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+    <!-- HOME -->
+    <div *ngIf="folder==='Inbox' ">
+      <img src="../../assets/MiLogo.jpeg" alt="">
+      <p>JESUS DAVID VALENCIA TORRES</p>
+    </div>
+    
+    <!-- CALCULADORA -->
+    <div *ngIf="folder==='Outbox' ">
+        <!-- Calculadora -->
+        <div class="calculadora-principal">
+          <div class="calculadora">
+            <ion-input type="number" [(ngModel)]="display" class="ion-text-end"></ion-input>
+          </div>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-button color="secondary" (click)="click('ac')">AC</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="secondary" (click)="click('c')">C</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="secondary" (click)="click('m')">M</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="secondary" (click)="click('mr')">MR</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('7')">7</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('8')">8</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('9')">9</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="danger" (click)="click('%')">%</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('4')">4</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('5')">5</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('6')">6</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="danger" (click)="click('X')">X</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('1')">1</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button color="primary" (click)="click('2')">2</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="primary" (click)="click('3')">3</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="danger" (click)="click('-')">-</ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col >
+                <ion-button  color="primary" (click)="click('0')">0</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button  color="danger" (click)="click('=')" class="double-width">=</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button  color="danger" (click)="click('+')">+</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+    </div>
+  </div>
+</ion-content>
